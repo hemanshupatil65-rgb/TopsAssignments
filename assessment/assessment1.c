@@ -57,14 +57,22 @@ int main() {
                 }
             }
 
-        } else {
+        } 
+		else {
             printf("Invalid choice!\n");
         }
+        do{
 
         printf("\nDo you want to continue? (y/n): ");
         scanf(" %c", &ans);
+        
+         if(ans != 'y' && ans != 'Y' && ans != 'n' && ans != 'N') {
+                printf("Invalid input! Please enter y or n.\n");
+            }
+
+    } while(ans != 'y' && ans != 'Y' && ans != 'n' && ans != 'N');
 
     } while(ans == 'y' || ans == 'Y');
 
-    return 0;
+    return 0;	
 }
